@@ -1,0 +1,1108 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {
+    "hyperedges": [
+      {
+        "id": "walls_grid_data_flow",
+        "label": "Walls Grid (list of wall-sets) shared data flow",
+        "nodes": [
+          "mouse_maze_generate_maze",
+          "mouse_maze_bfs_path",
+          "mouse_maze_choose_endpoints",
+          "mouse_maze_open_border_wall",
+          "mouse_maze_draw_maze",
+          "mouse_maze_new_game",
+          "mouse_maze_main"
+        ],
+        "relation": "participate_in",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "source_file": "mouse_maze.py"
+      },
+      {
+        "id": "frame_render_pipeline",
+        "label": "Per-frame render pipeline in game loop",
+        "nodes": [
+          "mouse_maze_draw_grid",
+          "mouse_maze_draw_guide",
+          "mouse_maze_draw_maze",
+          "mouse_maze_draw_cheese",
+          "mouse_maze_draw_mouse",
+          "mouse_maze_draw_hud"
+        ],
+        "relation": "form",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "source_file": "mouse_maze.py"
+      },
+      {
+        "id": "endpoint_selection_flow",
+        "label": "Entry/exit selection via >=5 BFS computations",
+        "nodes": [
+          "mouse_maze_border_cells",
+          "mouse_maze_bfs_path",
+          "mouse_maze_choose_endpoints",
+          "mouse_maze_open_border_wall",
+          "aigen_entry_exit_connectivity"
+        ],
+        "relation": "implement",
+        "confidence": "INFERRED",
+        "confidence_score": 0.85,
+        "source_file": "mouse_maze.py"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "label": "settings.local.json",
+      "file_type": "code",
+      "source_file": ".claude/settings.local.json",
+      "source_location": "L1",
+      "id": "claude_settings_local",
+      "community": 6,
+      "norm_label": "settings.local.json"
+    },
+    {
+      "label": "permissions",
+      "file_type": "code",
+      "source_file": ".claude/settings.local.json",
+      "source_location": "L2",
+      "id": "claude_settings_local_permissions",
+      "community": 6,
+      "norm_label": "permissions"
+    },
+    {
+      "label": "allow",
+      "file_type": "code",
+      "source_file": ".claude/settings.local.json",
+      "source_location": "L3",
+      "id": "claude_settings_local_permissions_allow",
+      "community": 6,
+      "norm_label": "allow"
+    },
+    {
+      "label": "mouse_maze.py",
+      "file_type": "code",
+      "source_file": "mouse_maze.py",
+      "source_location": "L1",
+      "id": "mouse_maze",
+      "community": 4,
+      "norm_label": "mouse_maze.py"
+    },
+    {
+      "label": "generate_maze()",
+      "file_type": "code",
+      "source_file": "mouse_maze.py",
+      "source_location": "L44",
+      "id": "mouse_maze_generate_maze",
+      "community": 3,
+      "norm_label": "generate_maze()"
+    },
+    {
+      "label": "bfs_path()",
+      "file_type": "code",
+      "source_file": "mouse_maze.py",
+      "source_location": "L68",
+      "id": "mouse_maze_bfs_path",
+      "community": 0,
+      "norm_label": "bfs_path()"
+    },
+    {
+      "label": "border_cells()",
+      "file_type": "code",
+      "source_file": "mouse_maze.py",
+      "source_location": "L93",
+      "id": "mouse_maze_border_cells",
+      "community": 4,
+      "norm_label": "border_cells()"
+    },
+    {
+      "label": "choose_endpoints()",
+      "file_type": "code",
+      "source_file": "mouse_maze.py",
+      "source_location": "L100",
+      "id": "mouse_maze_choose_endpoints",
+      "community": 4,
+      "norm_label": "choose_endpoints()"
+    },
+    {
+      "label": "open_border_wall()",
+      "file_type": "code",
+      "source_file": "mouse_maze.py",
+      "source_location": "L117",
+      "id": "mouse_maze_open_border_wall",
+      "community": 7,
+      "norm_label": "open_border_wall()"
+    },
+    {
+      "label": "cell_rect()",
+      "file_type": "code",
+      "source_file": "mouse_maze.py",
+      "source_location": "L130",
+      "id": "mouse_maze_cell_rect",
+      "community": 0,
+      "norm_label": "cell_rect()"
+    },
+    {
+      "label": "draw_grid()",
+      "file_type": "code",
+      "source_file": "mouse_maze.py",
+      "source_location": "L135",
+      "id": "mouse_maze_draw_grid",
+      "community": 1,
+      "norm_label": "draw_grid()"
+    },
+    {
+      "label": "draw_maze()",
+      "file_type": "code",
+      "source_file": "mouse_maze.py",
+      "source_location": "L142",
+      "id": "mouse_maze_draw_maze",
+      "community": 3,
+      "norm_label": "draw_maze()"
+    },
+    {
+      "label": "draw_guide()",
+      "file_type": "code",
+      "source_file": "mouse_maze.py",
+      "source_location": "L157",
+      "id": "mouse_maze_draw_guide",
+      "community": 0,
+      "norm_label": "draw_guide()"
+    },
+    {
+      "label": "draw_mouse()",
+      "file_type": "code",
+      "source_file": "mouse_maze.py",
+      "source_location": "L167",
+      "id": "mouse_maze_draw_mouse",
+      "community": 5,
+      "norm_label": "draw_mouse()"
+    },
+    {
+      "label": "draw_cheese()",
+      "file_type": "code",
+      "source_file": "mouse_maze.py",
+      "source_location": "L179",
+      "id": "mouse_maze_draw_cheese",
+      "community": 0,
+      "norm_label": "draw_cheese()"
+    },
+    {
+      "label": "draw_hud()",
+      "file_type": "code",
+      "source_file": "mouse_maze.py",
+      "source_location": "L187",
+      "id": "mouse_maze_draw_hud",
+      "community": 2,
+      "norm_label": "draw_hud()"
+    },
+    {
+      "label": "show_screen()",
+      "file_type": "code",
+      "source_file": "mouse_maze.py",
+      "source_location": "L197",
+      "id": "mouse_maze_show_screen",
+      "community": 1,
+      "norm_label": "show_screen()"
+    },
+    {
+      "label": "new_game()",
+      "file_type": "code",
+      "source_file": "mouse_maze.py",
+      "source_location": "L220",
+      "id": "mouse_maze_new_game",
+      "community": 7,
+      "norm_label": "new_game()"
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "mouse_maze.py",
+      "source_location": "L229",
+      "id": "mouse_maze_main",
+      "community": 1,
+      "norm_label": "main()"
+    },
+    {
+      "label": "Recursive-backtracker maze. walls[y][x] is the set of closed walls.",
+      "file_type": "rationale",
+      "source_file": "mouse_maze.py",
+      "source_location": "L45",
+      "id": "mouse_maze_rationale_45",
+      "community": 3,
+      "norm_label": "recursive-backtracker maze. walls[y][x] is the set of closed walls."
+    },
+    {
+      "label": "Shortest path (list of cells) from start to goal, or None.",
+      "file_type": "rationale",
+      "source_file": "mouse_maze.py",
+      "source_location": "L69",
+      "id": "mouse_maze_rationale_69",
+      "community": 0,
+      "norm_label": "shortest path (list of cells) from start to goal, or none."
+    },
+    {
+      "label": "Try >=5 random border (entry, exit) pairs, BFS each, keep the pair     with the",
+      "file_type": "rationale",
+      "source_file": "mouse_maze.py",
+      "source_location": "L101",
+      "id": "mouse_maze_rationale_101",
+      "community": 4,
+      "norm_label": "try >=5 random border (entry, exit) pairs, bfs each, keep the pair     with the"
+    },
+    {
+      "label": "Open the outer wall at an entrance/exit cell so it reads as a door.",
+      "file_type": "rationale",
+      "source_file": "mouse_maze.py",
+      "source_location": "L118",
+      "id": "mouse_maze_rationale_118",
+      "community": 7,
+      "norm_label": "open the outer wall at an entrance/exit cell so it reads as a door."
+    },
+    {
+      "label": "Faint table-like grid lines so cells are easy to see.",
+      "file_type": "rationale",
+      "source_file": "mouse_maze.py",
+      "source_location": "L136",
+      "id": "mouse_maze_rationale_136",
+      "community": 1,
+      "norm_label": "faint table-like grid lines so cells are easy to see."
+    },
+    {
+      "label": "Direct straight guide line from the mouse to the cheese (scent beacon).",
+      "file_type": "rationale",
+      "source_file": "mouse_maze.py",
+      "source_location": "L158",
+      "id": "mouse_maze_rationale_158",
+      "community": 0,
+      "norm_label": "direct straight guide line from the mouse to the cheese (scent beacon)."
+    },
+    {
+      "label": "Mouse sprite drawn inside one 16x16 cell.",
+      "file_type": "rationale",
+      "source_file": "mouse_maze.py",
+      "source_location": "L168",
+      "id": "mouse_maze_rationale_168",
+      "community": 5,
+      "norm_label": "mouse sprite drawn inside one 16x16 cell."
+    },
+    {
+      "label": "Full-screen banner. wait_key=True blocks for a key, else shows ~2.5 s.",
+      "file_type": "rationale",
+      "source_file": "mouse_maze.py",
+      "source_location": "L198",
+      "id": "mouse_maze_rationale_198",
+      "community": 1,
+      "norm_label": "full-screen banner. wait_key=true blocks for a key, else shows ~2.5 s."
+    },
+    {
+      "label": "Mouse Maze Game Module",
+      "file_type": "code",
+      "source_file": "mouse_maze.py",
+      "source_location": "L1-L281",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "mouse_maze_module",
+      "community": 2,
+      "norm_label": "mouse maze game module"
+    },
+    {
+      "label": "AI gen.txt Game Spec (Thai)",
+      "file_type": "document",
+      "source_file": "AI gen.txt",
+      "source_location": "L1-L10",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "aigen_spec",
+      "community": 2,
+      "norm_label": "ai gen.txt game spec (thai)"
+    },
+    {
+      "label": "Requirement: 30x30 maze, 16 per cell, one entry + one exit",
+      "file_type": "rationale",
+      "source_file": "AI gen.txt",
+      "source_location": "L3",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Fixed 30x30 grid with a single entrance and single exit defines the playfield scope. Spec says 16 cm per cell; the code interprets this as 16 px per cell (unit discrepancy).",
+      "id": "aigen_maze_30x30",
+      "community": 3,
+      "norm_label": "requirement: 30x30 maze, 16 per cell, one entry + one exit"
+    },
+    {
+      "label": "Requirement: entry/exit mutually reachable, >=5 computations",
+      "file_type": "rationale",
+      "source_file": "AI gen.txt",
+      "source_location": "L4",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Spec demands the two points be provably connected and that at least 5 'computations' occur when placing them. Code satisfies this by BFS-ing >=5 random border pairs and keeping the pair with the longest shortest path, which both proves connectivity and maximizes challenge.",
+      "id": "aigen_entry_exit_connectivity",
+      "community": 0,
+      "norm_label": "requirement: entry/exit mutually reachable, >=5 computations"
+    },
+    {
+      "label": "Requirement: mouse player sprite <=16x16, moves 1 cell per press",
+      "file_type": "rationale",
+      "source_file": "AI gen.txt",
+      "source_location": "L5",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Player is a mouse no larger than one cell (spec says 16x16 cm, code uses 16x16 px), stepping exactly one cell per key press so movement stays grid-aligned.",
+      "id": "aigen_mouse_player_16px",
+      "community": 5,
+      "norm_label": "requirement: mouse player sprite <=16x16, moves 1 cell per press"
+    },
+    {
+      "label": "Requirement: 3-minute limit -> GAME OVER + restart",
+      "file_type": "rationale",
+      "source_file": "AI gen.txt",
+      "source_location": "L5",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Walking for more than 3 minutes triggers a game over screen followed by an automatic restart, keeping rounds short.",
+      "id": "aigen_time_limit_3min",
+      "community": 1,
+      "norm_label": "requirement: 3-minute limit -> game over + restart"
+    },
+    {
+      "label": "Requirement: cheese at finish, shortest path shown as scent light",
+      "file_type": "rationale",
+      "source_file": "AI gen.txt",
+      "source_location": "L6",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "The mouse always 'knows' its shortest path to the cheese, visualized as a light resembling cheese smell. The code approximates this with a straight glowing beacon line from mouse to cheese rather than rendering the actual BFS path cells \u2014 a simplification of the spec's intent.",
+      "id": "aigen_cheese_scent_shortest_path",
+      "community": 0,
+      "norm_label": "requirement: cheese at finish, shortest path shown as scent light"
+    },
+    {
+      "label": "Requirement: WASD movement (forward/back/left/right)",
+      "file_type": "rationale",
+      "source_file": "AI gen.txt",
+      "source_location": "L8",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "aigen_wasd_movement",
+      "community": 1,
+      "norm_label": "requirement: wasd movement (forward/back/left/right)"
+    },
+    {
+      "label": "Requirement: SUCCESS screen on win",
+      "file_type": "rationale",
+      "source_file": "AI gen.txt",
+      "source_location": "L9",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "aigen_success_screen",
+      "community": 1,
+      "norm_label": "requirement: success screen on win"
+    },
+    {
+      "label": "Requirement: interface like terminal snake game",
+      "file_type": "rationale",
+      "source_file": "AI gen.txt",
+      "source_location": "L10",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Look and feel modeled on a terminal snake game: the code realizes this as black background, green walls, and a Consolas monospace font.",
+      "id": "aigen_terminal_snake_interface",
+      "community": 2,
+      "norm_label": "requirement: interface like terminal snake game"
+    },
+    {
+      "label": "Claude Code Local Permission Allowlist",
+      "file_type": "document",
+      "source_file": ".claude/settings.local.json",
+      "source_location": "L2-L9",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "settings_local_permissions",
+      "community": 2,
+      "norm_label": "claude code local permission allowlist"
+    }
+  ],
+  "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/settings.local.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "claude_settings_local",
+      "target": "claude_settings_local_permissions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/settings.local.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "claude_settings_local_permissions",
+      "target": "claude_settings_local_permissions_allow",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "mouse_maze.py",
+      "source_location": "L68",
+      "weight": 1.0,
+      "source": "mouse_maze",
+      "target": "mouse_maze_bfs_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "mouse_maze.py",
+      "source_location": "L93",
+      "weight": 1.0,
+      "source": "mouse_maze",
+      "target": "mouse_maze_border_cells",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "mouse_maze.py",
+      "source_location": "L130",
+      "weight": 1.0,
+      "source": "mouse_maze",
+      "target": "mouse_maze_cell_rect",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "mouse_maze.py",
+      "source_location": "L100",
+      "weight": 1.0,
+      "source": "mouse_maze",
+      "target": "mouse_maze_choose_endpoints",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "mouse_maze.py",
+      "source_location": "L179",
+      "weight": 1.0,
+      "source": "mouse_maze",
+      "target": "mouse_maze_draw_cheese",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "mouse_maze.py",
+      "source_location": "L135",
+      "weight": 1.0,
+      "source": "mouse_maze",
+      "target": "mouse_maze_draw_grid",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "mouse_maze.py",
+      "source_location": "L157",
+      "weight": 1.0,
+      "source": "mouse_maze",
+      "target": "mouse_maze_draw_guide",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "mouse_maze.py",
+      "source_location": "L187",
+      "weight": 1.0,
+      "source": "mouse_maze",
+      "target": "mouse_maze_draw_hud",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "mouse_maze.py",
+      "source_location": "L142",
+      "weight": 1.0,
+      "source": "mouse_maze",
+      "target": "mouse_maze_draw_maze",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "mouse_maze.py",
+      "source_location": "L167",
+      "weight": 1.0,
+      "source": "mouse_maze",
+      "target": "mouse_maze_draw_mouse",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "mouse_maze.py",
+      "source_location": "L44",
+      "weight": 1.0,
+      "source": "mouse_maze",
+      "target": "mouse_maze_generate_maze",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "mouse_maze.py",
+      "source_location": "L229",
+      "weight": 1.0,
+      "source": "mouse_maze",
+      "target": "mouse_maze_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "mouse_maze.py",
+      "source_location": "L220",
+      "weight": 1.0,
+      "source": "mouse_maze",
+      "target": "mouse_maze_new_game",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "mouse_maze.py",
+      "source_location": "L117",
+      "weight": 1.0,
+      "source": "mouse_maze",
+      "target": "mouse_maze_open_border_wall",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "mouse_maze.py",
+      "source_location": "L197",
+      "weight": 1.0,
+      "source": "mouse_maze",
+      "target": "mouse_maze_show_screen",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "implements",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "mouse_maze.py",
+      "source_location": "L44-L65",
+      "weight": 1.0,
+      "source": "mouse_maze_generate_maze",
+      "target": "aigen_maze_30x30"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "mouse_maze.py",
+      "source_location": "L46, L68",
+      "weight": 1.0,
+      "source": "mouse_maze_generate_maze",
+      "target": "mouse_maze_bfs_path"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "mouse_maze.py",
+      "source_location": "L46, L142",
+      "weight": 1.0,
+      "source": "mouse_maze_generate_maze",
+      "target": "mouse_maze_draw_maze"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "mouse_maze.py",
+      "source_location": "L221",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "mouse_maze_new_game",
+      "target": "mouse_maze_generate_maze"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "mouse_maze.py",
+      "source_location": "L45",
+      "weight": 1.0,
+      "source": "mouse_maze_rationale_45",
+      "target": "mouse_maze_generate_maze",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": "mouse_maze.py",
+      "source_location": "L68-L90",
+      "weight": 1.0,
+      "source": "mouse_maze_bfs_path",
+      "target": "aigen_cheese_scent_shortest_path"
+    },
+    {
+      "relation": "implements",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "mouse_maze.py",
+      "source_location": "L68-L90",
+      "weight": 1.0,
+      "source": "mouse_maze_bfs_path",
+      "target": "aigen_entry_exit_connectivity"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "mouse_maze.py",
+      "source_location": "L108",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "mouse_maze_choose_endpoints",
+      "target": "mouse_maze_bfs_path"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": "mouse_maze.py",
+      "source_location": "L68-L90, L157-L164",
+      "weight": 1.0,
+      "source": "mouse_maze_draw_guide",
+      "target": "mouse_maze_bfs_path"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "mouse_maze.py",
+      "source_location": "L69",
+      "weight": 1.0,
+      "source": "mouse_maze_rationale_69",
+      "target": "mouse_maze_bfs_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "mouse_maze.py",
+      "source_location": "L103",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "mouse_maze_choose_endpoints",
+      "target": "mouse_maze_border_cells"
+    },
+    {
+      "relation": "implements",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "mouse_maze.py",
+      "source_location": "L100-L114",
+      "weight": 1.0,
+      "source": "mouse_maze_choose_endpoints",
+      "target": "aigen_entry_exit_connectivity"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "mouse_maze.py",
+      "source_location": "L222",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "mouse_maze_new_game",
+      "target": "mouse_maze_choose_endpoints"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "mouse_maze.py",
+      "source_location": "L101",
+      "weight": 1.0,
+      "source": "mouse_maze_rationale_101",
+      "target": "mouse_maze_choose_endpoints",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "mouse_maze.py",
+      "source_location": "L223-L224",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "mouse_maze_new_game",
+      "target": "mouse_maze_open_border_wall"
+    },
+    {
+      "relation": "implements",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "mouse_maze.py",
+      "source_location": "L117-L127",
+      "weight": 1.0,
+      "source": "mouse_maze_open_border_wall",
+      "target": "aigen_maze_30x30"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "mouse_maze.py",
+      "source_location": "L118",
+      "weight": 1.0,
+      "source": "mouse_maze_rationale_118",
+      "target": "mouse_maze_open_border_wall",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "mouse_maze.py",
+      "source_location": "L180",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "mouse_maze_draw_cheese",
+      "target": "mouse_maze_cell_rect"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "mouse_maze.py",
+      "source_location": "L159-L160",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "mouse_maze_draw_guide",
+      "target": "mouse_maze_cell_rect"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "mouse_maze.py",
+      "source_location": "L169",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "mouse_maze_draw_mouse",
+      "target": "mouse_maze_cell_rect"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "mouse_maze.py",
+      "source_location": "L257",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "mouse_maze_main",
+      "target": "mouse_maze_draw_grid"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "mouse_maze.py",
+      "source_location": "L136",
+      "weight": 1.0,
+      "source": "mouse_maze_rationale_136",
+      "target": "mouse_maze_draw_grid",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "mouse_maze.py",
+      "source_location": "L259",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "mouse_maze_main",
+      "target": "mouse_maze_draw_maze"
+    },
+    {
+      "relation": "implements",
+      "confidence": "AMBIGUOUS",
+      "confidence_score": 0.3,
+      "source_file": "mouse_maze.py",
+      "source_location": "L157-L164",
+      "weight": 1.0,
+      "source": "mouse_maze_draw_guide",
+      "target": "aigen_cheese_scent_shortest_path"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "mouse_maze.py",
+      "source_location": "L258",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "mouse_maze_main",
+      "target": "mouse_maze_draw_guide"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "mouse_maze.py",
+      "source_location": "L158",
+      "weight": 1.0,
+      "source": "mouse_maze_rationale_158",
+      "target": "mouse_maze_draw_guide",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "implements",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "mouse_maze.py",
+      "source_location": "L167-L176",
+      "weight": 1.0,
+      "source": "mouse_maze_draw_mouse",
+      "target": "aigen_mouse_player_16px"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "mouse_maze.py",
+      "source_location": "L261",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "mouse_maze_main",
+      "target": "mouse_maze_draw_mouse"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "mouse_maze.py",
+      "source_location": "L168",
+      "weight": 1.0,
+      "source": "mouse_maze_rationale_168",
+      "target": "mouse_maze_draw_mouse",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "implements",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "mouse_maze.py",
+      "source_location": "L179-L184",
+      "weight": 1.0,
+      "source": "mouse_maze_draw_cheese",
+      "target": "aigen_cheese_scent_shortest_path"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "mouse_maze.py",
+      "source_location": "L260",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "mouse_maze_main",
+      "target": "mouse_maze_draw_cheese"
+    },
+    {
+      "relation": "implements",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": "mouse_maze.py",
+      "source_location": "L187-L194",
+      "weight": 1.0,
+      "source": "mouse_maze_draw_hud",
+      "target": "aigen_terminal_snake_interface"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "mouse_maze.py",
+      "source_location": "L262",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "mouse_maze_main",
+      "target": "mouse_maze_draw_hud"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "mouse_maze.py",
+      "source_location": "L266-L272",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "mouse_maze_main",
+      "target": "mouse_maze_show_screen"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "mouse_maze.py",
+      "source_location": "L198",
+      "weight": 1.0,
+      "source": "mouse_maze_rationale_198",
+      "target": "mouse_maze_show_screen",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "implements",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "mouse_maze.py",
+      "source_location": "L197-L217",
+      "weight": 1.0,
+      "source": "mouse_maze_show_screen",
+      "target": "aigen_success_screen"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "mouse_maze.py",
+      "source_location": "L237",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "mouse_maze_main",
+      "target": "mouse_maze_new_game"
+    },
+    {
+      "relation": "implements",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "mouse_maze.py",
+      "source_location": "L254-L274",
+      "weight": 1.0,
+      "source": "mouse_maze_main",
+      "target": "aigen_time_limit_3min"
+    },
+    {
+      "relation": "implements",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "mouse_maze.py",
+      "source_location": "L245-L252",
+      "weight": 1.0,
+      "source": "mouse_maze_main",
+      "target": "aigen_wasd_movement"
+    },
+    {
+      "relation": "cites",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "mouse_maze.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "mouse_maze_module",
+      "target": "aigen_spec"
+    },
+    {
+      "relation": "implements",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "mouse_maze.py",
+      "source_location": "L29-L37",
+      "weight": 1.0,
+      "source": "mouse_maze_module",
+      "target": "aigen_terminal_snake_interface"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".claude/settings.local.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "settings_local_permissions",
+      "target": "mouse_maze_module"
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "walls_grid_data_flow",
+      "label": "Walls Grid (list of wall-sets) shared data flow",
+      "nodes": [
+        "mouse_maze_generate_maze",
+        "mouse_maze_bfs_path",
+        "mouse_maze_choose_endpoints",
+        "mouse_maze_open_border_wall",
+        "mouse_maze_draw_maze",
+        "mouse_maze_new_game",
+        "mouse_maze_main"
+      ],
+      "relation": "participate_in",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "mouse_maze.py"
+    },
+    {
+      "id": "frame_render_pipeline",
+      "label": "Per-frame render pipeline in game loop",
+      "nodes": [
+        "mouse_maze_draw_grid",
+        "mouse_maze_draw_guide",
+        "mouse_maze_draw_maze",
+        "mouse_maze_draw_cheese",
+        "mouse_maze_draw_mouse",
+        "mouse_maze_draw_hud"
+      ],
+      "relation": "form",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "mouse_maze.py"
+    },
+    {
+      "id": "endpoint_selection_flow",
+      "label": "Entry/exit selection via >=5 BFS computations",
+      "nodes": [
+        "mouse_maze_border_cells",
+        "mouse_maze_bfs_path",
+        "mouse_maze_choose_endpoints",
+        "mouse_maze_open_border_wall",
+        "aigen_entry_exit_connectivity"
+      ],
+      "relation": "implement",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "mouse_maze.py"
+    }
+  ]
+}
